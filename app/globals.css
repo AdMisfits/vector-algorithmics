@@ -123,10 +123,20 @@ img {
 }
 
 .navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.02em;
   color: #000000;
+  text-decoration: none;
+}
+
+.navbar-logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 .navbar .cta-button {

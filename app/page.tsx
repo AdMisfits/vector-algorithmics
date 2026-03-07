@@ -111,7 +111,10 @@ export default function Home() {
       {/* ===== STICKY NAVBAR ===== */}
       <nav className="navbar">
         <div className="container">
-          <div className="navbar-logo">Vector Algorithmics</div>
+          <a href="/" className="navbar-logo">
+            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/69091d8328c53ed57a28516d_HV8YTQsibbLd23QLmuXM8YJbUA%20(1)%202.png" alt="Vector Algorithmics" className="navbar-logo-img" />
+            <span>Vector Algorithmics</span>
+          </a>
           <a href="#book" className="cta-button">Book a Demo</a>
         </div>
       </nav>
@@ -125,14 +128,6 @@ export default function Home() {
             No leverage. No offshore brokers. Your capital stays at a U.S. regulated brokerage.
           </p>
           <a href="#book" className="cta-button">See Live Performance</a>
-          <div className="hero-image">
-            <img
-              src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/69091d8328c53ed57a28516d_HV8YTQsibbLd23QLmuXM8YJbUA%20(1)%202.png"
-              alt="Vector Algorithmics trading dashboard"
-              width={900}
-              height={506}
-            />
-          </div>
         </div>
       </section>
 
