@@ -122,7 +122,7 @@ export default function Home() {
       {/* ===== HERO ===== */}
       <section className="hero">
         <div className="container">
-          <h1>Grow your portfolio in any market.<br />Automated algorithms. Your brokerage.</h1>
+          <h1>Grow your portfolio in any market.</h1>
           <p>
             Market-neutral strategies that profit from volatility—whether markets rise or fall.
             No leverage. No offshore brokers. Your capital stays in your own U.S. regulated account.
