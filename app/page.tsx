@@ -115,7 +115,7 @@ export default function Home() {
             <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/69091d8328c53ed57a28516d_HV8YTQsibbLd23QLmuXM8YJbUA%20(1)%202.png" alt="Vector Algorithmics" className="navbar-logo-img" />
             <span>Vector Algorithmics</span>
           </a>
-          <a href="#book" className="cta-button">Book a Strategy Session</a>
+          <a href="#book" className="cta-button">Book a Demo Session</a>
         </div>
       </nav>
 
@@ -130,7 +130,7 @@ export default function Home() {
           <div className="hero-proof">
             1,000+ active clients &middot; 4.6/5 Trustpilot &middot; 5-year track record
           </div>
-          <a href="#book" className="cta-button">Book a Strategy Session</a>
+          <a href="#book" className="cta-button">Book a Demo Session</a>
           <p className="cta-micro">Free 30-min call — no obligation</p>
         </div>
       </section>
@@ -226,7 +226,7 @@ export default function Home() {
             </div>
           </div>
           <div className="section-cta">
-            <a href="#book" className="cta-button">Book a Strategy Session</a>
+            <a href="#book" className="cta-button">Book a Demo Session</a>
             <p className="cta-micro">Free 30-min call — no obligation</p>
           </div>
         </div>
@@ -334,7 +334,7 @@ export default function Home() {
             </div>
           </div>
           <div className="section-cta">
-            <a href="#book" className="cta-button">Book a Strategy Session</a>
+            <a href="#book" className="cta-button">Book a Demo Session</a>
             <p className="cta-micro">See live performance data on the call</p>
           </div>
         </div>
@@ -419,7 +419,7 @@ export default function Home() {
             </div>
           </div>
           <div className="section-cta">
-            <a href="#book" className="cta-button">Book a Strategy Session</a>
+            <a href="#book" className="cta-button">Book a Demo Session</a>
             <p className="cta-micro">Free 30-min call — no obligation</p>
           </div>
         </div>
@@ -555,7 +555,7 @@ export default function Home() {
             </div>
           </div>
           <div className="section-cta">
-            <a href="#book" className="cta-button">Book a Strategy Session</a>
+            <a href="#book" className="cta-button">Book a Demo Session</a>
             <p className="cta-micro">Join 1,000+ clients already using Vector</p>
           </div>
         </div>
@@ -601,7 +601,7 @@ export default function Home() {
             </p>
           </div>
           <div className="section-cta">
-            <a href="#book" className="cta-button">Book a Strategy Session</a>
+            <a href="#book" className="cta-button">Book a Demo Session</a>
             <p className="cta-micro">Get community access when you join</p>
           </div>
         </div>
@@ -693,7 +693,7 @@ export default function Home() {
             ))}
           </div>
           <div className="section-cta">
-            <a href="#book" className="cta-button">Book a Strategy Session</a>
+            <a href="#book" className="cta-button">Book a Demo Session</a>
             <p className="cta-micro">Still have questions? Ask them on the call</p>
           </div>
         </div>
@@ -716,7 +716,7 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <div className="section-eyebrow">Get Started</div>
-            <h2 className="section-title">Book a Strategy Session</h2>
+            <h2 className="section-title">Book a Demo Session</h2>
             <p className="section-subtitle">
               Answer two quick questions, then pick a time on the calendar. No pressure, no pitch—just data.
             </p>
@@ -735,7 +735,7 @@ export default function Home() {
               <div className="panel-header">
                 <p className="eyebrow" id="panelEyebrow">Lead screen</p>
                 <p className="step-meta" id="stepMeta">Step 1 of 2</p>
-                <h3 className="panel-title" id="panelTitle">Book a Strategy Session</h3>
+                <h3 className="panel-title" id="panelTitle">Book a Demo Session</h3>
                 <p className="panel-description" id="panelDescription">
                   One focused call to see exactly how our all-weather approach would treat your capital.
                 </p>
