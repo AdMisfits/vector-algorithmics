@@ -122,10 +122,10 @@ export default function Home() {
       {/* ===== HERO ===== */}
       <section className="hero">
         <div className="container">
-          <h1>Plug automated trading algorithms<br />into your brokerage account.</h1>
+          <h1>Grow your portfolio in any market.<br />Automated algorithms. Your brokerage.</h1>
           <p>
-            Market-neutral systems that profit from volatility—whether markets rise or fall.
-            No leverage. No offshore brokers. Your capital stays at a U.S. regulated brokerage.
+            Market-neutral strategies that profit from volatility—whether markets rise or fall.
+            No leverage. No offshore brokers. Your capital stays in your own U.S. regulated account.
           </p>
           <a href="#book" className="cta-button">See Live Performance</a>
         </div>
