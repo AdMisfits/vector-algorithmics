@@ -127,7 +127,7 @@ export default function Home() {
           <a href="#book" className="cta-button">See Live Performance</a>
           <div className="hero-image">
             <img
-              src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/684cce7d02bf87cc43b2e8dd_HV8YTQsibbLd23QLmuXM8YJbUA%20(1)%202.png"
+              src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/69091d8328c53ed57a28516d_HV8YTQsibbLd23QLmuXM8YJbUA%20(1)%202.png"
               alt="Vector Algorithmics trading dashboard"
               width={900}
               height={506}
@@ -155,10 +155,10 @@ export default function Home() {
         <div className="container">
           <div className="featured-in-label">Featured In</div>
           <div className="featured-logos">
-            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/6835c9a12aa5d9d6ae2e3ccd_business-insider.svg" alt="Business Insider" height={24} />
-            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/6835c9a19cb3dc5da36e8c63_usa-today.svg" alt="USA Today" height={24} />
-            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/6835c9a1af62e4c61453c0f5_techbullion.svg" alt="TechBullion" height={24} />
-            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/6835c9a114aae9d8da8ced91_gbaf.svg" alt="GBAF" height={24} />
+            <img src="/images/logos/business-insider.png" alt="Business Insider" height={24} />
+            <img src="/images/logos/usa-today.png" alt="USA Today" height={24} />
+            <img src="/images/logos/techbullion.webp" alt="TechBullion" height={24} />
+            <img src="/images/logos/gbaf.avif" alt="GBAF" height={24} />
           </div>
         </div>
       </section>
@@ -190,7 +190,7 @@ export default function Home() {
             </div>
             <div className="beyond-chart">
               <img
-                src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683b3ba4fa775c7b95a849ea_vector-performance-chart.svg"
+                src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/69352db5d26b124dbf373a01_vector-performance-chart.svg"
                 alt="Vector Algorithmics performance chart"
                 width={560}
                 height={400}
@@ -341,8 +341,9 @@ export default function Home() {
         <div className="container">
           <div className="featured-in-label">Compatible Brokerages</div>
           <div className="broker-logos">
-            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/6835f7acc254b6d08d77d3b8_tradovate.svg" alt="Tradovate" height={36} />
-            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/6835f7ac16d2e8e58e1e4cfe_interactive-brokers.svg" alt="Interactive Brokers" height={36} />
+            <img src="/images/brokers/tradovate.png" alt="Tradovate" height={36} />
+            <img src="/images/brokers/interactive-brokers.png" alt="Interactive Brokers" height={36} />
+            <img src="/images/brokers/tradestation.png" alt="TradeStation" height={36} />
           </div>
         </div>
       </section>
@@ -607,7 +608,7 @@ export default function Home() {
             <div className="team-card">
               <img
                 className="team-photo"
-                src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/6836086e14aae9d8daa05df3_luc-lising.webp"
+                src="/images/team/luc-lising.webp"
                 alt="Luc Lising"
                 width={400}
                 height={400}
@@ -628,7 +629,7 @@ export default function Home() {
             <div className="team-card">
               <img
                 className="team-photo"
-                src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/6836086eaf62e4c61466e01e_jason-silver.webp"
+                src="/images/team/jason-silver.webp"
                 alt="Jason Silver"
                 width={400}
                 height={400}
@@ -649,7 +650,7 @@ export default function Home() {
             <div className="team-card">
               <img
                 className="team-photo"
-                src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/6836086e8f09e81bf5b96a62_gareth-wicks.webp"
+                src="/images/team/gareth-wicks.webp"
                 alt="Gareth Wicks"
                 width={400}
                 height={400}
@@ -819,12 +820,12 @@ export default function Home() {
           </div>
 
           <div className="footer-payment">
-            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c0c254b6d08d857af5_visa.svg" alt="Visa" />
-            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c0d254f5138d6c6e86_mastercard.svg" alt="Mastercard" />
-            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c08f09e81bf5c87a31_amex.svg" alt="American Express" />
-            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c014aae9d8daa92d86_discover.svg" alt="Discover" />
-            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c0ce5afc88f9e86be2_coinbase.svg" alt="Coinbase" />
-            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c016d2e8e58e2ef22e_solana.svg" alt="Solana" />
+            <img src="/images/payment/visa.png" alt="Visa" />
+            <img src="/images/payment/mastercard.png" alt="Mastercard" />
+            <img src="/images/payment/amex.png" alt="American Express" />
+            <img src="/images/payment/discover.png" alt="Discover" />
+            <img src="/images/payment/coinbase.png" alt="Coinbase" />
+            <img src="/images/payment/solana.png" alt="Solana" />
             <span className="footer-payment-note">All payments processed securely. *Conditions apply</span>
           </div>
 
