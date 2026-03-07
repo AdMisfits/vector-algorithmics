@@ -177,8 +177,13 @@ img {
 }
 
 .cta-micro {
-  font-size: 11px;
+  font-size: 13px;
   color: #86868b;
+  margin-top: 12px;
+}
+
+.hero .cta-micro {
+  font-size: 11px;
   margin-top: 32px;
 }
 
@@ -1132,6 +1137,13 @@ img {
 }
 
 @media (max-width: 768px) {
+  .navbar-logo span {
+    display: none;
+  }
+  .navbar .cta-button {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
   .hero h1 {
     font-size: 36px;
   }
