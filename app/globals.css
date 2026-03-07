@@ -97,10 +97,47 @@ img {
   background: #0077ed;
 }
 
+.section-cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+/* ===== STICKY NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 12px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.navbar .cta-button {
+  font-size: 14px;
+  padding: 10px 24px;
+}
+
 /* ===== HERO ===== */
 .hero {
   text-align: center;
-  padding: 60px 0 40px;
+  padding: 120px 0 40px;
 }
 
 .hero h1 {
@@ -203,7 +240,7 @@ img {
 
 .featured-logos img {
   height: 24px;
-  opacity: 0.5;
+  opacity: 0.65;
   filter: grayscale(100%);
   transition: opacity 0.2s ease;
 }
@@ -266,6 +303,69 @@ img {
   width: 100%;
   border-radius: 16px;
   box-shadow: 0px 0px 30px -15px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== HOW IT WORKS ===== */
+.how-it-works {
+  padding: 80px 0;
+  background: #f5f5f7;
+}
+
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.how-step {
+  text-align: center;
+  position: relative;
+}
+
+.how-step-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #0071e3;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.how-step h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.how-step p {
+  font-size: 15px;
+  color: #424245;
+  line-height: 1.6;
+}
+
+.how-step-connector {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .how-step-connector {
+    display: block;
+    position: absolute;
+    top: 28px;
+    left: calc(50% + 36px);
+    width: calc(100% - 72px);
+    height: 2px;
+    background: repeating-linear-gradient(to right, #dadce0 0, #dadce0 8px, transparent 8px, transparent 16px);
+  }
 }
 
 /* ===== STRATEGIES ===== */
@@ -778,39 +878,6 @@ img {
   line-height: 1.6;
 }
 
-/* ===== PAYMENT METHODS ===== */
-.payment-methods {
-  padding: 32px 0;
-  text-align: center;
-}
-
-.payment-methods-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 10px;
-  margin-bottom: 12px;
-}
-
-.payment-icon-wrapper img {
-  height: 22px;
-  max-width: 60px;
-  display: block;
-  border-radius: 5px;
-  transition: transform 0.2s ease-in-out;
-}
-
-.payment-icon-wrapper img:hover {
-  transform: scale(1.08);
-}
-
-.payment-note {
-  font-size: 12px;
-  color: #86868b;
-}
-
 /* ===== FAQ ===== */
 .faq-section {
   padding: 80px 0;
@@ -897,6 +964,50 @@ img {
   font-size: 13px;
   color: #86868b;
   margin-top: 16px;
+}
+
+/* ===== CONTACT LINE ===== */
+.contact-line {
+  font-size: 15px;
+  color: #86868b;
+  margin-top: 24px;
+}
+
+.contact-line a {
+  color: #0071e3;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.contact-line a:hover {
+  opacity: 0.8;
+}
+
+/* ===== PAYMENT METHODS (FOOTER) ===== */
+.footer-payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.footer-payment img {
+  height: 20px;
+  max-width: 56px;
+  border-radius: 4px;
+  opacity: 0.5;
+}
+
+.footer-payment-note {
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  color: #86868b;
+  margin-top: 4px;
 }
 
 /* ===== FOOTER ===== */
@@ -1001,6 +1112,11 @@ img {
   }
   .hero p {
     font-size: 18px;
+  }
+  .how-steps {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    gap: 40px;
   }
   .section-title,
   .beyond-content h2,

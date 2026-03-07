@@ -107,16 +107,23 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 export default function Home() {
   return (
     <main>
+      {/* ===== STICKY NAVBAR ===== */}
+      <nav className="navbar">
+        <div className="container">
+          <div className="navbar-logo">Vector Algorithmics</div>
+          <a href="/survey" className="cta-button">Book a Demo</a>
+        </div>
+      </nav>
+
       {/* ===== HERO ===== */}
       <section className="hero">
         <div className="container">
-          <h1>Automated trading that profits<br />in any market.</h1>
+          <h1>Plug automated trading algorithms<br />into your brokerage account.</h1>
           <p>
-            Market-neutral trading systems that profit from volatility—capturing gains
-            whether markets rise or fall. No leverage. No offshore brokers. U.S. regulated
-            execution.
+            Market-neutral systems that profit from volatility—whether markets rise or fall.
+            No leverage. No offshore brokers. Your capital stays at a U.S. regulated brokerage.
           </p>
-          <a href="/survey" className="cta-button">Book a Demo</a>
+          <a href="/survey" className="cta-button">See Live Performance</a>
           <div className="hero-image">
             <img
               src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/684cce7d02bf87cc43b2e8dd_HV8YTQsibbLd23QLmuXM8YJbUA%20(1)%202.png"
@@ -192,6 +199,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== HOW IT WORKS ===== */}
+      <section className="how-it-works">
+        <div className="container">
+          <div className="section-header">
+            <div className="section-eyebrow">How It Works</div>
+            <h2 className="section-title">Live in 3 Steps</h2>
+          </div>
+          <div className="how-steps">
+            <div className="how-step">
+              <div className="how-step-number">1</div>
+              <h3>Book a Demo</h3>
+              <p>See live performance data, ask hard questions, and decide if Vector is right for your account size and goals.</p>
+              <div className="how-step-connector" aria-hidden="true" />
+            </div>
+            <div className="how-step">
+              <div className="how-step-number">2</div>
+              <h3>Connect Your Broker</h3>
+              <p>Link your U.S. regulated brokerage account. Your capital never leaves your control—we simply connect the software.</p>
+              <div className="how-step-connector" aria-hidden="true" />
+            </div>
+            <div className="how-step">
+              <div className="how-step-number">3</div>
+              <h3>Algorithms Trade for You</h3>
+              <p>The system executes trades 24/7 with defined risk on every position. Monitor results in real time from your broker.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== STRATEGIES ===== */}
       <section className="section">
         <div className="container">
@@ -207,7 +243,7 @@ export default function Home() {
             <div className="strategy-card">
               <div className="strategy-card-header">
                 <div className="strategy-asset-label">Mega-Cap Equities</div>
-                <h3>Stocks Strategy</h3>
+                <h3>Earn 6-8% Monthly on Top Stocks</h3>
                 <div className="strategy-tickers">TSLA, NVDA, AAPL, AMZN</div>
               </div>
               <p className="strategy-approach">
@@ -237,7 +273,7 @@ export default function Home() {
             <div className="strategy-card">
               <div className="strategy-card-header">
                 <div className="strategy-asset-label">Nasdaq Composite Index</div>
-                <h3>Futures Strategy</h3>
+                <h3>Capture 5-10% Monthly on Futures</h3>
                 <div className="strategy-tickers">NDAQ, CL, DJI</div>
               </div>
               <p className="strategy-approach">
@@ -267,7 +303,7 @@ export default function Home() {
             <div className="strategy-card">
               <div className="strategy-card-header">
                 <div className="strategy-asset-label">Large-Cap Cryptocurrencies</div>
-                <h3>Crypto Strategy</h3>
+                <h3>Target 10-15% Monthly on Crypto</h3>
                 <div className="strategy-tickers">BTC, SOL, DOT, ETH</div>
               </div>
               <p className="strategy-approach">
@@ -292,6 +328,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="section-cta">
+            <a href="/survey" className="cta-button">See Live Performance</a>
           </div>
         </div>
       </section>
@@ -372,6 +411,9 @@ export default function Home() {
                 Visible logic: RSI divergence, VWAP levels, session opens. You can see exactly why every trade was taken.
               </p>
             </div>
+          </div>
+          <div className="section-cta">
+            <a href="/survey" className="cta-button">Book a Demo</a>
           </div>
         </div>
       </section>
@@ -536,79 +578,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="schedule-grid">
-            <div className="schedule-day">
-              <div className="schedule-day-name">Monday</div>
-              <div className="schedule-session">
-                <div className="schedule-time">9:00 AM</div>
-                <div className="schedule-name">Premarket Call</div>
-              </div>
-              <div className="schedule-session">
-                <div className="schedule-time">9:30 AM</div>
-                <div className="schedule-name">Live Trading</div>
-              </div>
-              <div className="schedule-session">
-                <div className="schedule-time">11:00 AM</div>
-                <div className="schedule-name">Futures Q&amp;A</div>
-              </div>
-            </div>
-            <div className="schedule-day">
-              <div className="schedule-day-name">Tuesday</div>
-              <div className="schedule-session">
-                <div className="schedule-time">9:00 AM</div>
-                <div className="schedule-name">Premarket Call</div>
-              </div>
-              <div className="schedule-session">
-                <div className="schedule-time">9:30 AM</div>
-                <div className="schedule-name">Live Trading</div>
-              </div>
-              <div className="schedule-session">
-                <div className="schedule-time">11:00 AM</div>
-                <div className="schedule-name">Futures Q&amp;A</div>
-              </div>
-            </div>
-            <div className="schedule-day">
-              <div className="schedule-day-name">Wednesday</div>
-              <div className="schedule-session">
-                <div className="schedule-time">9:00 AM</div>
-                <div className="schedule-name">Premarket Call</div>
-              </div>
-              <div className="schedule-session">
-                <div className="schedule-time">9:30 AM</div>
-                <div className="schedule-name">Live Trading</div>
-              </div>
-              <div className="schedule-session">
-                <div className="schedule-time">12:00 PM</div>
-                <div className="schedule-name">Crypto/Stocks Q&amp;A</div>
-              </div>
-            </div>
-            <div className="schedule-day">
-              <div className="schedule-day-name">Thursday</div>
-              <div className="schedule-session">
-                <div className="schedule-time">9:00 AM</div>
-                <div className="schedule-name">Premarket Call</div>
-              </div>
-              <div className="schedule-session">
-                <div className="schedule-time">9:30 AM</div>
-                <div className="schedule-name">Live Trading</div>
-              </div>
-            </div>
-            <div className="schedule-day">
-              <div className="schedule-day-name">Friday</div>
-              <div className="schedule-session">
-                <div className="schedule-time">9:00 AM</div>
-                <div className="schedule-name">Premarket Call</div>
-              </div>
-              <div className="schedule-session">
-                <div className="schedule-time">9:30 AM</div>
-                <div className="schedule-name">Live Trading</div>
-              </div>
-              <div className="schedule-session">
-                <div className="schedule-time">11:00 AM</div>
-                <div className="schedule-name">Group Coaching</div>
-              </div>
-            </div>
-          </div>
 
           <div className="confidence-callout">
             <div className="confidence-icon">
@@ -619,6 +588,9 @@ export default function Home() {
               live premarket calls, trading sessions, strategy Q&amp;As, and a private community
               of 1,000+ active traders.
             </p>
+          </div>
+          <div className="section-cta">
+            <a href="/survey" className="cta-button">Join the Community</a>
           </div>
         </div>
       </section>
@@ -710,33 +682,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== PAYMENT METHODS ===== */}
-      <section className="payment-methods">
-        <div className="container">
-          <div className="payment-methods-container">
-            <div className="payment-icon-wrapper">
-              <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c0c254b6d08d857af5_visa.svg" alt="Visa" />
-            </div>
-            <div className="payment-icon-wrapper">
-              <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c0d254f5138d6c6e86_mastercard.svg" alt="Mastercard" />
-            </div>
-            <div className="payment-icon-wrapper">
-              <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c08f09e81bf5c87a31_amex.svg" alt="American Express" />
-            </div>
-            <div className="payment-icon-wrapper">
-              <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c014aae9d8daa92d86_discover.svg" alt="Discover" />
-            </div>
-            <div className="payment-icon-wrapper">
-              <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c0ce5afc88f9e86be2_coinbase.svg" alt="Coinbase" />
-            </div>
-            <div className="payment-icon-wrapper">
-              <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c016d2e8e58e2ef22e_solana.svg" alt="Solana" />
-            </div>
-          </div>
-          <p className="payment-note">All payments are processed on a secure server. *Conditions apply</p>
-        </div>
-      </section>
-
       {/* ===== FAQ ===== */}
       <section className="faq-section">
         <div className="container">
@@ -758,8 +703,11 @@ export default function Home() {
           <p>
             Book a demo. See the live performance. Ask hard questions. No pressure, no pitch—just data.
           </p>
-          <a href="/survey" className="cta-button">Book a Demo</a>
+          <a href="/survey" className="cta-button">See Live Performance</a>
           <p className="min-capital">$20,000 minimum capital required</p>
+          <p className="contact-line">
+            Questions? Email us at <a href="mailto:support@vectoralgorithmics.com">support@vectoralgorithmics.com</a>
+          </p>
         </div>
       </section>
 
@@ -789,6 +737,16 @@ export default function Home() {
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
               </a>
             </div>
+          </div>
+
+          <div className="footer-payment">
+            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c0c254b6d08d857af5_visa.svg" alt="Visa" />
+            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c0d254f5138d6c6e86_mastercard.svg" alt="Mastercard" />
+            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c08f09e81bf5c87a31_amex.svg" alt="American Express" />
+            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c014aae9d8daa92d86_discover.svg" alt="Discover" />
+            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c0ce5afc88f9e86be2_coinbase.svg" alt="Coinbase" />
+            <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/683616c016d2e8e58e2ef22e_solana.svg" alt="Solana" />
+            <span className="footer-payment-note">All payments processed securely. *Conditions apply</span>
           </div>
 
           <div className="footer-disclaimer">
