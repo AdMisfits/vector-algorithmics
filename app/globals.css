@@ -168,6 +168,20 @@ img {
   line-height: 1.5;
 }
 
+.hero-proof {
+  font-size: 14px;
+  font-weight: 500;
+  color: #86868b;
+  letter-spacing: 0.02em;
+  margin-bottom: 28px;
+}
+
+.cta-micro {
+  font-size: 13px;
+  color: #86868b;
+  margin-top: 12px;
+}
+
 .hero-image {
   max-width: 900px;
   margin: 48px auto 0;

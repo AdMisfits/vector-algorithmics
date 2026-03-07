@@ -115,7 +115,7 @@ export default function Home() {
             <img src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/69091d8328c53ed57a28516d_HV8YTQsibbLd23QLmuXM8YJbUA%20(1)%202.png" alt="Vector Algorithmics" className="navbar-logo-img" />
             <span>Vector Algorithmics</span>
           </a>
-          <a href="#book" className="cta-button">Book a Demo</a>
+          <a href="#book" className="cta-button">Book a Strategy Session</a>
         </div>
       </nav>
 
@@ -125,9 +125,13 @@ export default function Home() {
           <h1>Grow your portfolio in any market.</h1>
           <p>
             Market-neutral strategies that profit from volatility—whether markets rise or fall.
-            No leverage. No offshore brokers. Your capital stays in your own U.S. regulated account.
+            No leverage. Your capital stays in your own U.S. regulated account.
           </p>
-          <a href="#book" className="cta-button">See Live Performance</a>
+          <div className="hero-proof">
+            1,000+ active clients &middot; 4.6/5 Trustpilot &middot; 5-year track record
+          </div>
+          <a href="#book" className="cta-button">Book a Strategy Session</a>
+          <p className="cta-micro">Free 30-min call — no obligation</p>
         </div>
       </section>
 
@@ -220,6 +224,10 @@ export default function Home() {
               <h3>Algorithms Trade for You</h3>
               <p>The system executes trades 24/7 with defined risk on every position. Monitor results in real time from your broker.</p>
             </div>
+          </div>
+          <div className="section-cta">
+            <a href="#book" className="cta-button">Book a Strategy Session</a>
+            <p className="cta-micro">Free 30-min call — no obligation</p>
           </div>
         </div>
       </section>
@@ -326,7 +334,8 @@ export default function Home() {
             </div>
           </div>
           <div className="section-cta">
-            <a href="#book" className="cta-button">See Live Performance</a>
+            <a href="#book" className="cta-button">Book a Strategy Session</a>
+            <p className="cta-micro">See live performance data on the call</p>
           </div>
         </div>
       </section>
@@ -410,7 +419,8 @@ export default function Home() {
             </div>
           </div>
           <div className="section-cta">
-            <a href="#book" className="cta-button">Book a Demo</a>
+            <a href="#book" className="cta-button">Book a Strategy Session</a>
+            <p className="cta-micro">Free 30-min call — no obligation</p>
           </div>
         </div>
       </section>
@@ -544,6 +554,10 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="section-cta">
+            <a href="#book" className="cta-button">Book a Strategy Session</a>
+            <p className="cta-micro">Join 1,000+ clients already using Vector</p>
+          </div>
         </div>
       </section>
 
@@ -587,7 +601,8 @@ export default function Home() {
             </p>
           </div>
           <div className="section-cta">
-            <a href="#book" className="cta-button">Join the Community</a>
+            <a href="#book" className="cta-button">Book a Strategy Session</a>
+            <p className="cta-micro">Get community access when you join</p>
           </div>
         </div>
       </section>
@@ -666,19 +681,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== GUARANTEE ===== */}
-      <section className="guarantee-section">
-        <div className="container">
-          <div className="section-eyebrow">Our Promise</div>
-          <h2>12 Month Performance Guarantee</h2>
-          <p>
-            Anyone can look good for 30 days. That&apos;s why we give you 12 months to evaluate
-            the algorithms in live market conditions. If it doesn&apos;t perform, full refund.
-          </p>
-          <a href="#book" className="cta-button">Book a Demo</a>
-        </div>
-      </section>
-
       {/* ===== FAQ ===== */}
       <section className="faq-section">
         <div className="container">
@@ -690,6 +692,22 @@ export default function Home() {
               <FAQItem key={i} question={item.q} answer={item.a} />
             ))}
           </div>
+          <div className="section-cta">
+            <a href="#book" className="cta-button">Book a Strategy Session</a>
+            <p className="cta-micro">Still have questions? Ask them on the call</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== GUARANTEE ===== */}
+      <section className="guarantee-section">
+        <div className="container">
+          <div className="section-eyebrow">Our Promise</div>
+          <h2>12 Month Performance Guarantee</h2>
+          <p>
+            Anyone can look good for 30 days. That&apos;s why we give you 12 months to evaluate
+            the algorithms in live market conditions. If it doesn&apos;t perform, full refund.
+          </p>
         </div>
       </section>
 
