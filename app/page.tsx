@@ -21,6 +21,10 @@ const faqData = [
     a: 'Our algorithms have historically averaged around 50% annually across all strategies. Monthly returns typically range between 5-20%, though performance varies by market conditions. We publish all results transparently, including losses—for example, September saw a -4% drawdown. Past performance does not guarantee future results.',
   },
   {
+    q: 'Why license the algorithms instead of just trading them?',
+    a: 'Firms like Two Sigma, AQR, and Renaissance Medallion run similar strategies—but they manage billions. Our edge works best in the $100K–$5M account range. Rather than raise a fund, we license the technology directly to individual traders who want institutional-grade automation at a fraction of the cost.',
+  },
+  {
     q: 'How is my capital protected?',
     a: 'We are a software provider—we never hold, manage, or have access to your capital. Your funds stay in your own account at a U.S. regulated brokerage with FDIC/SIPC insurance. You maintain full control of deposits, withdrawals, and account settings at all times.',
   },
@@ -33,8 +37,24 @@ const faqData = [
     a: 'Our strategies have been developed over a 5-year cycle with continuous refinement. Markets evolve, and so do our algorithms. That said, we back every license with a 12-month satisfaction guarantee. If performance does not meet expectations, you receive a full refund.',
   },
   {
+    q: 'Do you trade your own capital using the same algorithm?',
+    a: 'Yes. These algorithms were originally developed for proprietary trading. Our team runs the same strategies on our own capital. We eat our own cooking.',
+  },
+  {
+    q: 'How is risk managed?',
+    a: 'Every trade includes a defined stop-loss with engineered maximum drawdowns. We use sound position sizing relative to account equity, never employ leverage, and execute through regulated U.S. brokerages. Capital preservation is the foundation—returns follow.',
+  },
+  {
     q: 'What\'s the minimum to get started?',
-    a: 'We require a minimum of $20,000 in liquid capital. This ensures the algorithms can execute proper position sizing and risk management across the strategies you choose. We also offer interest-free installment plans through Splitit.',
+    a: 'We require a minimum of $20,000 in liquid capital. This ensures the algorithms can execute proper position sizing and risk management across the strategies you choose.',
+  },
+  {
+    q: 'Do you offer payment plans?',
+    a: 'Yes. We partner with Splitit to offer interest-free installment plans. Payments are split across your existing credit card with no additional interest or fees. You\'ll need available credit on your card to qualify.',
+  },
+  {
+    q: 'How liquid is this? Can I withdraw funds?',
+    a: 'Completely liquid. Your capital sits in your own brokerage account. You can withdraw funds at any time, pause the algorithms, or adjust your settings. The software simply connects to your U.S. broker to execute trades—you retain full control.',
   },
 ];
 
@@ -129,28 +149,15 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ===== FEATURED IN + BROKERS ===== */}
+      {/* ===== FEATURED IN ===== */}
       <section className="featured-in">
         <div className="container">
-          <div className="logo-strip">
-            <div className="logo-strip-group">
-              <div className="featured-in-label">Featured In</div>
-              <div className="featured-logos">
-                <img src="/images/logos/business-insider.png" alt="Business Insider" height={24} />
-                <img src="/images/logos/usa-today.png" alt="USA Today" height={24} />
-                <img src="/images/logos/techbullion.webp" alt="TechBullion" height={24} />
-                <img src="/images/logos/gbaf.avif" alt="GBAF" height={24} />
-              </div>
-            </div>
-            <div className="logo-strip-divider" />
-            <div className="logo-strip-group">
-              <div className="featured-in-label">Compatible Brokerages</div>
-              <div className="featured-logos">
-                <img src="/images/brokers/tradovate.png" alt="Tradovate" height={28} />
-                <img src="/images/brokers/interactive-brokers.png" alt="Interactive Brokers" height={28} />
-                <img src="/images/brokers/tradestation.png" alt="TradeStation" height={28} />
-              </div>
-            </div>
+          <div className="featured-in-label">Featured In</div>
+          <div className="featured-logos">
+            <img src="/images/logos/business-insider.png" alt="Business Insider" height={24} />
+            <img src="/images/logos/usa-today.png" alt="USA Today" height={24} />
+            <img src="/images/logos/techbullion.webp" alt="TechBullion" height={24} />
+            <img src="/images/logos/gbaf.avif" alt="GBAF" height={24} />
           </div>
         </div>
       </section>
@@ -177,10 +184,6 @@ export default function Home() {
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   Your capital, your account at FDIC/SIPC insured U.S. regulated brokerage
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  60/40 tax treatment on futures — Section 1256 blended rates regardless of holding period
                 </li>
               </ul>
             </div>
@@ -337,16 +340,111 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== BROKER COMPATIBILITY ===== */}
+      <section className="broker-section">
+        <div className="container">
+          <div className="featured-in-label">Compatible Brokerages</div>
+          <div className="broker-logos">
+            <img src="/images/brokers/tradovate.png" alt="Tradovate" height={36} />
+            <img src="/images/brokers/interactive-brokers.png" alt="Interactive Brokers" height={36} />
+            <img src="/images/brokers/tradestation.png" alt="TradeStation" height={36} />
+          </div>
+        </div>
+      </section>
+
+      {/* ===== THE VECTOR DIFFERENCE ===== */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <div className="section-eyebrow">Why Vector</div>
+            <h2 className="section-title">The Vector Difference</h2>
+            <p className="section-subtitle">
+              What separates institutional-grade automation from everything else on the market.
+            </p>
+          </div>
+          <div className="difference-grid">
+            <div className="difference-card">
+              <div className="difference-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </div>
+              <div className="difference-title">Zero Leverage</div>
+              <p className="difference-desc">
+                Returns come from edge, not risk amplification. We never use margin or leverage to inflate performance numbers.
+              </p>
+            </div>
+            <div className="difference-card">
+              <div className="difference-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" strokeLinecap="round" strokeLinejoin="round"/><line x1="12" y1="8" x2="12" y2="12" strokeLinecap="round" strokeLinejoin="round"/><line x1="12" y1="16" x2="12.01" y2="16" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </div>
+              <div className="difference-title">Defined Risk</div>
+              <p className="difference-desc">
+                Every trade has a stop-loss. Maximum drawdowns are engineered into the system, not left to chance.
+              </p>
+            </div>
+            <div className="difference-card">
+              <div className="difference-icon">
+                <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M7 11V7a5 5 0 0 1 10 0v4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </div>
+              <div className="difference-title">U.S. Regulated Brokerages</div>
+              <p className="difference-desc">
+                Your capital stays in your own account at an FDIC/SIPC insured brokerage. We never hold or manage your funds.
+              </p>
+            </div>
+            <div className="difference-card">
+              <div className="difference-icon">
+                <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" strokeLinecap="round" strokeLinejoin="round"/><circle cx="12" cy="12" r="3" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </div>
+              <div className="difference-title">Full Transparency</div>
+              <p className="difference-desc">
+                We publish losses alongside wins. September was -4%. No cherry-picking, no hiding behind &ldquo;simulated&rdquo; results.
+              </p>
+            </div>
+            <div className="difference-card">
+              <div className="difference-icon">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" strokeLinecap="round" strokeLinejoin="round"/><polyline points="14 2 14 8 20 8" strokeLinecap="round" strokeLinejoin="round"/><line x1="16" y1="13" x2="8" y2="13" strokeLinecap="round" strokeLinejoin="round"/><line x1="16" y1="17" x2="8" y2="17" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </div>
+              <div className="difference-title">60/40 Tax Treatment</div>
+              <p className="difference-desc">
+                Section 1256 futures contracts qualify for blended tax rates—60% long-term, 40% short-term—regardless of holding period.
+              </p>
+            </div>
+            <div className="difference-card">
+              <div className="difference-icon">
+                <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6" strokeLinecap="round" strokeLinejoin="round"/><polyline points="8 6 2 12 8 18" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </div>
+              <div className="difference-title">No Black Boxes</div>
+              <p className="difference-desc">
+                Visible logic: RSI divergence, VWAP levels, session opens. You can see exactly why every trade was taken.
+              </p>
+            </div>
+          </div>
+          <div className="section-cta">
+            <a href="#book" className="cta-button">Book a Demo Session</a>
+            <p className="cta-micro">Free 30-min call — no obligation</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== TRUSTPILOT ===== */}
+      <section className="trustpilot-section">
+        <div className="container">
+          <div className="trustpilot-badge">
+            <div className="trustpilot-stars">
+              {'★★★★★'}
+            </div>
+            <div className="trustpilot-text">
+              <strong>4.5/5</strong> on Trustpilot &middot; Verified Reviews
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== TESTIMONIALS ===== */}
       <section className="section">
         <div className="container">
           <div className="section-header">
             <div className="section-eyebrow">Results</div>
             <h2 className="section-title">What Our Clients Say</h2>
-            <div className="trustpilot-badge" style={{ margin: '16px auto 0' }}>
-              <div className="trustpilot-stars">{'★★★★★'}</div>
-              <div className="trustpilot-text"><strong>4.5/5</strong> on Trustpilot &middot; Verified Reviews</div>
-            </div>
           </div>
           <div className="testimonials-grid">
             {/* Featured */}
@@ -395,6 +493,66 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            <div className="testimonial-card">
+              <Stars />
+              <p>
+                &ldquo;2.5 years in, multiple six figures in returns. The community and the live
+                sessions add a layer of support you won&apos;t find anywhere else.&rdquo;
+              </p>
+              <div className="testimonial-footer">
+                <div className="testimonial-avatar avatar-orange">RM</div>
+                <div className="testimonial-author">
+                  <strong>Ruffalo McCosworth <span className="verified-badge">Verified</span></strong>
+                  <span>August 01, 2025</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="testimonial-card">
+              <Stars />
+              <p>
+                &ldquo;The focus on 1:1 or 2:1 P/L ratios gives me confidence. Every trade has
+                a clear plan and defined risk. This is how institutional trading should be.&rdquo;
+              </p>
+              <div className="testimonial-footer">
+                <div className="testimonial-avatar avatar-teal">J</div>
+                <div className="testimonial-author">
+                  <strong>Jian <span className="verified-badge">Verified</span></strong>
+                  <span>July 25, 2025</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="testimonial-card">
+              <Stars />
+              <p>
+                &ldquo;$14K prop firm payout in just 3 weeks using the futures algorithm.
+                The consistency is unreal. Already scaling to a bigger account.&rdquo;
+              </p>
+              <div className="testimonial-footer">
+                <div className="testimonial-avatar avatar-pink">ER</div>
+                <div className="testimonial-author">
+                  <strong>Edgar Reynaga <span className="verified-badge">Verified</span></strong>
+                  <span>May 30, 2025</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="testimonial-card">
+              <Stars />
+              <p>
+                &ldquo;Multiple prop firm payouts achieved. The algorithms are consistent
+                and the support team is always available. Couldn&apos;t ask for more.&rdquo;
+              </p>
+              <div className="testimonial-footer">
+                <div className="testimonial-avatar avatar-red">B</div>
+                <div className="testimonial-author">
+                  <strong>Bo <span className="verified-badge">Verified</span></strong>
+                  <span>June 15, 2025</span>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="section-cta">
             <a href="#book" className="cta-button">Book a Demo Session</a>
@@ -403,38 +561,120 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== COMMUNITY ===== */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <div className="section-eyebrow">Community</div>
+            <h2 className="section-title">More Than Software</h2>
+          </div>
 
+          <div className="quote-card">
+            <div className="quote-text">&ldquo;It&apos;s like joining a fraternity.&rdquo;</div>
+            <div className="quote-attribution">— Dr. Chad Clark</div>
+          </div>
+
+          <div className="stats-row">
+            <div className="stat-item">
+              <div className="stat-value">15+</div>
+              <div className="stat-label">Live Sessions / Week</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-value">5</div>
+              <div className="stat-label">Days of Premarket Calls</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-value">1,000+</div>
+              <div className="stat-label">Active Members</div>
+            </div>
+          </div>
+
+
+          <div className="confidence-callout">
+            <div className="confidence-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" strokeLinecap="round" strokeLinejoin="round"/><circle cx="9" cy="7" r="4" strokeLinecap="round" strokeLinejoin="round"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" strokeLinecap="round" strokeLinejoin="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </div>
+            <p className="confidence-text">
+              <strong>You&apos;re not doing this alone.</strong> Every member gets access to
+              live premarket calls, trading sessions, strategy Q&amp;As, and a private community
+              of 1,000+ active traders.
+            </p>
+          </div>
+          <div className="section-cta">
+            <a href="#book" className="cta-button">Book a Demo Session</a>
+            <p className="cta-micro">Get community access when you join</p>
+          </div>
+        </div>
+      </section>
 
       {/* ===== LEADERSHIP ===== */}
-      <section className="section team-section-compact">
+      <section className="section">
         <div className="container">
           <div className="section-header">
             <div className="section-eyebrow">Leadership</div>
             <h2 className="section-title">The Team Behind Vector</h2>
           </div>
-          <div className="team-row">
-            <div className="team-row-item">
-              <img className="team-row-photo" src="/images/team/luc-lising.webp" alt="Luc Lising" />
-              <div>
-                <div className="team-row-name">Luc Lising</div>
-                <div className="team-row-role">CEO</div>
-                <div className="team-row-bio">Former Account Executive at REC Canada. 9+ figures in client investments managed.</div>
+          <div className="team-grid">
+            <div className="team-card">
+              <img
+                className="team-photo"
+                src="/images/team/luc-lising.webp"
+                alt="Luc Lising"
+                width={400}
+                height={400}
+              />
+              <div className="team-info">
+                <div className="team-name">Luc Lising</div>
+                <div className="team-role">Chief Executive Officer</div>
+                <p className="team-bio">
+                  Former Account Executive at REC Canada. 9+ figures in client investments managed.
+                </p>
+                <a href="#" className="linkedin-link" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
               </div>
             </div>
-            <div className="team-row-item">
-              <img className="team-row-photo" src="/images/team/jason-silver.webp" alt="Jason Silver" />
-              <div>
-                <div className="team-row-name">Jason Silver</div>
-                <div className="team-row-role">Head of Quantitative Strategy</div>
-                <div className="team-row-bio">30 years active trading. 8 years proprietary trader at JPMorgan.</div>
+
+            <div className="team-card">
+              <img
+                className="team-photo"
+                src="/images/team/jason-silver.webp"
+                alt="Jason Silver"
+                width={400}
+                height={400}
+              />
+              <div className="team-info">
+                <div className="team-name">Jason Silver</div>
+                <div className="team-role">Head of Quantitative Strategy</div>
+                <p className="team-bio">
+                  30 years active trading. 8 years proprietary trader at JPMorgan. Former FDNY firefighter.
+                </p>
+                <a href="#" className="linkedin-link" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
               </div>
             </div>
-            <div className="team-row-item">
-              <img className="team-row-photo" src="/images/team/gareth-wicks.webp" alt="Gareth Wicks" />
-              <div>
-                <div className="team-row-name">Gareth Wicks</div>
-                <div className="team-row-role">Head of Client Success</div>
-                <div className="team-row-bio">Built and operated live trading mentorship with 200+ traders.</div>
+
+            <div className="team-card">
+              <img
+                className="team-photo"
+                src="/images/team/gareth-wicks.webp"
+                alt="Gareth Wicks"
+                width={400}
+                height={400}
+              />
+              <div className="team-info">
+                <div className="team-name">Gareth Wicks</div>
+                <div className="team-role">Head of Client Success</div>
+                <p className="team-bio">
+                  Built and operated live trading mentorship with 200+ traders.
+                </p>
+                <a href="#" className="linkedin-link" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
               </div>
             </div>
           </div>
