@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Script from 'next/script';
 
 const benefitItems = [
   { icon: 'shield', text: '12 Month Guarantee' },
@@ -111,7 +112,7 @@ export default function Home() {
       <nav className="navbar">
         <div className="container">
           <div className="navbar-logo">Vector Algorithmics</div>
-          <a href="/survey" className="cta-button">Book a Demo</a>
+          <a href="#book" className="cta-button">Book a Demo</a>
         </div>
       </nav>
 
@@ -123,7 +124,7 @@ export default function Home() {
             Market-neutral systems that profit from volatility—whether markets rise or fall.
             No leverage. No offshore brokers. Your capital stays at a U.S. regulated brokerage.
           </p>
-          <a href="/survey" className="cta-button">See Live Performance</a>
+          <a href="#book" className="cta-button">See Live Performance</a>
           <div className="hero-image">
             <img
               src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/684cce7d02bf87cc43b2e8dd_HV8YTQsibbLd23QLmuXM8YJbUA%20(1)%202.png"
@@ -330,7 +331,7 @@ export default function Home() {
             </div>
           </div>
           <div className="section-cta">
-            <a href="/survey" className="cta-button">See Live Performance</a>
+            <a href="#book" className="cta-button">See Live Performance</a>
           </div>
         </div>
       </section>
@@ -413,7 +414,7 @@ export default function Home() {
             </div>
           </div>
           <div className="section-cta">
-            <a href="/survey" className="cta-button">Book a Demo</a>
+            <a href="#book" className="cta-button">Book a Demo</a>
           </div>
         </div>
       </section>
@@ -590,7 +591,7 @@ export default function Home() {
             </p>
           </div>
           <div className="section-cta">
-            <a href="/survey" className="cta-button">Join the Community</a>
+            <a href="#book" className="cta-button">Join the Community</a>
           </div>
         </div>
       </section>
@@ -678,7 +679,7 @@ export default function Home() {
             Anyone can look good for 30 days. That&apos;s why we give you 12 months to evaluate
             the algorithms in live market conditions. If it doesn&apos;t perform, full refund.
           </p>
-          <a href="/survey" className="cta-button">Book a Demo</a>
+          <a href="#book" className="cta-button">Book a Demo</a>
         </div>
       </section>
 
@@ -696,20 +697,98 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== FINAL CTA ===== */}
-      <section className="final-cta">
+      {/* ===== SMART CAPTURE WIDGET ===== */}
+      <section id="book" className="smart-capture-section">
         <div className="container">
-          <h2>Start with a conversation.</h2>
-          <p>
-            Book a demo. See the live performance. Ask hard questions. No pressure, no pitch—just data.
-          </p>
-          <a href="/survey" className="cta-button">See Live Performance</a>
-          <p className="min-capital">$20,000 minimum capital required</p>
-          <p className="contact-line">
+          <div className="section-header">
+            <div className="section-eyebrow">Get Started</div>
+            <h2 className="section-title">Book a Strategy Session</h2>
+            <p className="section-subtitle">
+              Answer two quick questions, then pick a time on the calendar. No pressure, no pitch—just data.
+            </p>
+          </div>
+
+          <section className="capture-topbar">
+            <div className="topbar-badge" id="brandBadge">Smart lead capture</div>
+            <div style={{ display: 'contents' }}>
+              <div className="step-pill active" id="stepPillForm">Fill out the form</div>
+              <div className="step-pill" id="stepPillBooking">Book your event</div>
+            </div>
+          </section>
+
+          <section className="capture-card">
+            <section className="form-panel">
+              <div className="panel-header">
+                <p className="eyebrow" id="panelEyebrow">Lead screen</p>
+                <p className="step-meta" id="stepMeta">Step 1 of 2</p>
+                <h3 className="panel-title" id="panelTitle">Book a Strategy Session</h3>
+                <p className="panel-description" id="panelDescription">
+                  One focused call to see exactly how our all-weather approach would treat your capital.
+                </p>
+              </div>
+
+              <div className="panel-body" id="panelBody"></div>
+
+              <div className="panel-actions">
+                <button className="button button-secondary" type="button" id="secondaryAction" hidden>Back</button>
+                <button className="button button-primary" type="button" id="primaryAction">Continue</button>
+              </div>
+
+              <p className="status-message" id="statusMessage" hidden></p>
+            </section>
+
+            <aside className="calendar-panel" id="calendarPanel">
+              <div className="calendar-header">
+                <div>
+                  <p className="calendar-kicker" id="calendarKicker">
+                    Times shown in <strong data-user-timezone="">your timezone</strong>
+                  </p>
+                  <h2 className="calendar-title" id="calendarTitle" style={{ display: 'none' }}>
+                    Your booking page
+                  </h2>
+                </div>
+                <p className="calendar-note" id="calendarNote">
+                  Please fill out the form before choosing your time slot.
+                </p>
+              </div>
+
+              <div className="calendar-frame-wrap">
+                <div className="calendar-overlay" id="calendarOverlay">
+                  <div className="overlay-card">
+                    <p className="overlay-title" id="calendarOverlayTitle">
+                      Please fill out the form before choosing your time slot.
+                    </p>
+                    <p className="overlay-copy" id="calendarOverlayCopy"></p>
+                  </div>
+                </div>
+
+                <div className="calendar-placeholder" id="calendarPlaceholder" hidden>
+                  <p id="calendarPlaceholderText">Calendar loading...</p>
+                </div>
+
+                <iframe
+                  className="calendar-frame"
+                  id="bookingFrame"
+                  title="Book your event"
+                  loading="lazy"
+                  scrolling="auto"
+                  src="about:blank"
+                ></iframe>
+              </div>
+            </aside>
+          </section>
+
+          <nav className="sc-legal-links" id="legalLinks"></nav>
+
+          <p className="contact-line" style={{ textAlign: 'center', marginTop: 32 }}>
             Questions? Email us at <a href="mailto:support@vectoralgorithmics.com">support@vectoralgorithmics.com</a>
           </p>
         </div>
       </section>
+
+      <Script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" strategy="beforeInteractive" />
+      <Script src="/smart-capture/config.js" strategy="afterInteractive" />
+      <Script src="/smart-capture/app.js" strategy="afterInteractive" />
 
       {/* ===== FOOTER ===== */}
       <footer className="site-footer">
