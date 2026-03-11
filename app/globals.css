@@ -820,12 +820,15 @@ img {
 
 /* ===== TEAM ===== */
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 32px;
 }
 
 .team-card {
+  width: calc((100% - 64px) / 3);
+  min-width: 0;
   background: #ffffff;
   border: 1px solid #dadce0;
   border-radius: 24px;
@@ -1125,8 +1128,8 @@ img {
   .schedule-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .team-card {
+    width: calc((100% - 32px) / 2);
   }
   .section-title,
   .beyond-content h2,
@@ -1221,9 +1224,11 @@ img {
     padding: 32px 24px;
   }
   .team-grid {
-    grid-template-columns: 1fr;
     max-width: 400px;
     margin: 0 auto;
+  }
+  .team-card {
+    width: 100%;
   }
 }
 
