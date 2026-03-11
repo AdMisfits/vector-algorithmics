@@ -1123,14 +1123,14 @@
       return;
     }
 
+    var nextHeight = extractIframeHeight(event.data);
+    if (nextHeight) {
+      applyCalendarFrameHeight(nextHeight);
+    }
+
     var data = parseMessageData(event.data);
     if (!data) {
       return;
-    }
-
-    var nextHeight = extractIframeHeight(data);
-    if (nextHeight) {
-      applyCalendarFrameHeight(nextHeight);
     }
 
     if (isBookingCompleteMessage(data)) {
@@ -1167,12 +1167,28 @@
   }
 
   function extractIframeHeight(data) {
-    if (!data || typeof data !== "object") {
+    if (!data) {
+      return null;
+    }
+
+    if (typeof data === "string") {
+      return extractIframeResizerHeight(data);
+    }
+
+    if (typeof data !== "object") {
       return null;
     }
 
     if (data.type === "resize" && data.height) {
       return data.height;
+    }
+
+    if (data.type === "setHeight" && data.height) {
+      return data.height;
+    }
+
+    if (data.iframeHeight) {
+      return data.iframeHeight;
     }
 
     if (data.height) {
@@ -1184,6 +1200,27 @@
     }
 
     return null;
+  }
+
+  function extractIframeResizerHeight(message) {
+    if (typeof message !== "string" || message.indexOf("[iFrameSizer]") !== 0) {
+      return null;
+    }
+
+    var tokens = message.slice("[iFrameSizer]".length).split(":");
+    var numericTokens = tokens
+      .map(function (token) {
+        return Number(token);
+      })
+      .filter(function (value) {
+        return Number.isFinite(value) && value > 100;
+      });
+
+    if (!numericTokens.length) {
+      return null;
+    }
+
+    return Math.max.apply(Math, numericTokens);
   }
 
   function applyCalendarFrameHeight(height) {
@@ -1586,7 +1623,7 @@
       try {
         return JSON.parse(data);
       } catch (error) {
-        return null;
+        return data;
       }
     }
 

@@ -21,7 +21,9 @@ window.SMART_CAPTURE_CONFIG = {
     allowedMessageOrigins: [
       "https://api.leadconnectorhq.com",
       "https://links.vectoralgorithmics.io",
-      "https://link.msgsndr.com"
+      "https://link.msgsndr.com",
+      "https://stcdn.leadconnectorhq.com",
+      "https://storage.googleapis.com"
     ]
   },
   privacy: {
