@@ -771,7 +771,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="calendar-frame-wrap">
+              <div className="calendar-frame-wrap" id="calendarFrameWrap">
                 <div className="calendar-overlay" id="calendarOverlay">
                   <div className="overlay-card">
                     <p className="overlay-title" id="calendarOverlayTitle">

@@ -139,6 +139,7 @@
     dom.calendarOverlayCopy = document.getElementById("calendarOverlayCopy");
     dom.calendarPlaceholder = document.getElementById("calendarPlaceholder");
     dom.calendarPlaceholderText = document.getElementById("calendarPlaceholderText");
+    dom.calendarFrameWrap = document.getElementById("calendarFrameWrap");
     dom.bookingFrame = document.getElementById("bookingFrame");
     dom.legalLinks = document.getElementById("legalLinks");
     dom.calendarPanel = document.getElementById("calendarPanel");
@@ -955,6 +956,7 @@
 
   function syncCalendarFrame(includeLeadFields) {
     if (!config.calendar.url) {
+      resetCalendarFrameHeight();
       if (dom.calendarPlaceholderText) {
         dom.calendarPlaceholderText.innerHTML = 'Add your GHL booking URL in <code>config.js</code> to render the calendar here.';
       }
@@ -964,6 +966,7 @@
     }
 
     if (shouldDeferCalendarEmbed()) {
+      resetCalendarFrameHeight();
       if (dom.calendarPlaceholderText) {
         dom.calendarPlaceholderText.textContent = state.status === "disqualified"
           ? "This calendar is hidden on mobile because the lead is not currently qualified."
@@ -975,6 +978,7 @@
       return;
     }
 
+    resetCalendarFrameHeight();
     dom.calendarPlaceholder.hidden = true;
     dom.bookingFrame.hidden = false;
     dom.bookingFrame.src = buildCalendarUrl(includeLeadFields);
@@ -1126,8 +1130,7 @@
 
     var nextHeight = extractIframeHeight(data);
     if (nextHeight) {
-      dom.bookingFrame.style.minHeight = nextHeight + "px";
-      dom.bookingFrame.style.height = "auto";
+      applyCalendarFrameHeight(nextHeight);
     }
 
     if (isBookingCompleteMessage(data)) {
@@ -1181,6 +1184,37 @@
     }
 
     return null;
+  }
+
+  function applyCalendarFrameHeight(height) {
+    var nextHeight = Number(height);
+    if (!Number.isFinite(nextHeight) || nextHeight <= 0) {
+      return;
+    }
+
+    var resolvedHeight = Math.max(Math.round(nextHeight), isPrimaryMobile() ? 380 : 460) + "px";
+
+    if (dom.calendarFrameWrap) {
+      dom.calendarFrameWrap.style.minHeight = resolvedHeight;
+      dom.calendarFrameWrap.style.height = resolvedHeight;
+    }
+
+    if (dom.bookingFrame) {
+      dom.bookingFrame.style.minHeight = resolvedHeight;
+      dom.bookingFrame.style.height = resolvedHeight;
+    }
+  }
+
+  function resetCalendarFrameHeight() {
+    if (dom.calendarFrameWrap) {
+      dom.calendarFrameWrap.style.minHeight = "";
+      dom.calendarFrameWrap.style.height = "";
+    }
+
+    if (dom.bookingFrame) {
+      dom.bookingFrame.style.minHeight = "";
+      dom.bookingFrame.style.height = "";
+    }
   }
 
   function redirectToConfirmation() {
