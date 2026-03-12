@@ -612,67 +612,72 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <div className="section-eyebrow">Leadership</div>
-            <h2 className="section-title">The Team Behind Vector</h2>
+            <h2 className="section-title">Built by people who&apos;ve done this before.</h2>
+            <p className="section-subtitle">
+              Not anonymous founders. Not offshore entities. A team you can verify, building systems we use ourselves.
+            </p>
           </div>
           <div className="team-grid">
             <div className="team-card">
-              <img
-                className="team-photo"
-                src="/images/team/luc-lising.webp"
-                alt="Luc Lising"
-                width={400}
-                height={400}
-              />
+              <img className="team-photo" src="/images/team/luc-lising.webp" alt="Luc Lising" width={400} height={400} />
               <div className="team-info">
                 <div className="team-name">Luc Lising</div>
                 <div className="team-role">Chief Executive Officer</div>
-                <p className="team-bio">
-                  Former Account Executive at REC Canada. 9+ figures in client investments managed.
-                </p>
-                <a href="#" className="linkedin-link" target="_blank" rel="noopener noreferrer">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <p className="team-bio">Former Account Executive at REC Canada. 9+ figures in client investments managed.</p>
+                <a href="https://www.linkedin.com/in/luc-lising-a43014164/" className="linkedin-link" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                   LinkedIn
                 </a>
               </div>
             </div>
 
             <div className="team-card">
-              <img
-                className="team-photo"
-                src="/images/team/jason-silver.webp"
-                alt="Jason Silver"
-                width={400}
-                height={400}
-              />
+              <img className="team-photo" src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/69af2526ff2342f3199df434_image0.jpeg" alt="Maxwell Hines" width={400} height={400} />
+              <div className="team-info">
+                <div className="team-name">Maxwell Hines</div>
+                <div className="team-role">Chief Investment Officer</div>
+                <p className="team-bio">Former Fixed Income Portfolio Management at AllianceBernstein. Aspiring Chess GM.</p>
+                <a href="https://www.linkedin.com/in/maxhines/" className="linkedin-link" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+
+            <div className="team-card">
+              <img className="team-photo" src="https://cdn.prod.website-files.com/67af85ea353c5f066fec698e/69af32ed2e06383651e6f92d_Gemini_Generated_Image_k2wxamk2wxamk2wx.webp" alt="Rich Lovatt" width={400} height={400} />
+              <div className="team-info">
+                <div className="team-name">Rich Lovatt</div>
+                <div className="team-role">Chief Operating Officer</div>
+                <p className="team-bio">15+ years in sales leadership and operations. Former film and TV actor.</p>
+                <a href="https://www.linkedin.com/in/richardjohnlovatt/" className="linkedin-link" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+
+            <div className="team-card">
+              <img className="team-photo" src="/images/team/jason-silver.webp" alt="Jason Silver" width={400} height={400} />
               <div className="team-info">
                 <div className="team-name">Jason Silver</div>
                 <div className="team-role">Head of Quantitative Strategy</div>
-                <p className="team-bio">
-                  30 years active trading. 8 years proprietary trader at JPMorgan. Former FDNY firefighter.
-                </p>
-                <a href="#" className="linkedin-link" target="_blank" rel="noopener noreferrer">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <p className="team-bio">30 years active trading. 8 years as proprietary trader at JPMorgan. Former FDNY firefighter.</p>
+                <a href="https://www.linkedin.com/in/jason-silver-969b0464/" className="linkedin-link" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                   LinkedIn
                 </a>
               </div>
             </div>
 
             <div className="team-card">
-              <img
-                className="team-photo"
-                src="/images/team/gareth-wicks.webp"
-                alt="Gareth Wicks"
-                width={400}
-                height={400}
-              />
+              <img className="team-photo" src="/images/team/gareth-wicks.webp" alt="Gareth Wicks" width={400} height={400} />
               <div className="team-info">
                 <div className="team-name">Gareth Wicks</div>
                 <div className="team-role">Head of Client Success</div>
-                <p className="team-bio">
-                  Built and operated live trading mentorship with 200+ traders.
-                </p>
-                <a href="#" className="linkedin-link" target="_blank" rel="noopener noreferrer">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <p className="team-bio">Built and operated a live trading mentorship business with 200+ active traders.</p>
+                <a href="https://www.linkedin.com/in/gareth-wicks-ab4aa61a2/" className="linkedin-link" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                   LinkedIn
                 </a>
               </div>
@@ -766,7 +771,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="calendar-frame-wrap">
+              <div className="calendar-frame-wrap" id="calendarFrameWrap">
                 <div className="calendar-overlay" id="calendarOverlay">
                   <div className="overlay-card">
                     <p className="overlay-title" id="calendarOverlayTitle">
