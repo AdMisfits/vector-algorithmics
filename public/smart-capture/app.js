@@ -1171,6 +1171,10 @@
       return null;
     }
 
+    if (Array.isArray(data)) {
+      return extractArrayHeight(data);
+    }
+
     if (typeof data === "string") {
       return extractIframeResizerHeight(data);
     }
@@ -1197,6 +1201,31 @@
 
     if (data.event === "calendly.page_height" && data.payload && data.payload.height) {
       return data.payload.height;
+    }
+
+    return null;
+  }
+
+  function extractArrayHeight(data) {
+    if (!Array.isArray(data) || !data.length) {
+      return null;
+    }
+
+    var eventName = data[0];
+    var payload = data.length > 1 ? data[1] : null;
+
+    if (typeof payload === "object" && payload) {
+      if ((eventName === "highlevel.setHeight" || eventName === "setHeight") && payload.height) {
+        return payload.height;
+      }
+
+      if (payload.iframeHeight) {
+        return payload.iframeHeight;
+      }
+
+      if (payload.height) {
+        return payload.height;
+      }
     }
 
     return null;
