@@ -1814,4 +1814,19 @@
       '  <path d="M10.4 4.8L3.9 16.2C3.3 17.3 4.1 18.7 5.4 18.7H18.6C19.9 18.7 20.7 17.3 20.1 16.2L13.6 4.8C12.9 3.6 11.1 3.6 10.4 4.8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>' +
       "</svg>";
   }
+    window.addEventListener("smart_capture_booking_complete", function () {
+      if (state.bookingCompleted) return;
+      state.bookingCompleted = true;
+      updateStatusMessage("Booking complete. Sending confirmation...", false);
+      pushDataLayer("booking_complete", {
+        ghl_contact_id: state.ghlContactId || null,
+        session_id: state.sessionId,
+        funnel_key: config.funnelKey,
+        qualified: state.qualified
+      });
+      persistEvent("booking_complete", {}).finally(function () {
+        clearDraft();
+        window.location.href = config.calendar.confirmationUrl || config.calendar.confirmationPath || "/confirmation";
+      });
+    });
 })();
