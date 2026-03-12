@@ -152,20 +152,6 @@ img {
   text-align: center;
   padding: 120px 0 40px;
   background: linear-gradient(180deg, #eef2ff 0%, #f8f9fb 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -120px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle, rgba(19, 95, 246, 0.08) 0%, transparent 70%);
-  pointer-events: none;
 }
 
 .hero h1 {
