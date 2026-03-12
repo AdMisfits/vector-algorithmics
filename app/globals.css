@@ -151,7 +151,7 @@ img {
 .hero {
   text-align: center;
   padding: 120px 0 40px;
-  background: linear-gradient(180deg, #eef2ff 0%, #f8f9fb 100%);
+  background: #ffffff;
 }
 
 .hero h1 {
