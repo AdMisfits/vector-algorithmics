@@ -793,8 +793,50 @@
       if (data.contact && data.contact.id) {
         state.ghlContactId = data.contact.id;
         console.log("GHL contact upserted:", data.contact.id);
+        createContactNote(data.contact.id, ghl);
       }
       return data;
+    });
+  }
+
+  function createContactNote(contactId, ghl) {
+    var answers = buildAnswerPayload();
+    var leadFieldIds = {};
+    flattenFields().forEach(function (field) {
+      if (field.leadField) {
+        leadFieldIds[field.id] = true;
+      }
+    });
+
+    var lines = [];
+    Object.keys(answers).forEach(function (key) {
+      if (leadFieldIds[key]) return;
+      var entry = answers[key];
+      lines.push("Q. " + entry.label);
+      lines.push("A. " + entry.display_value);
+      lines.push("");
+    });
+
+    if (!lines.length) return;
+
+    var noteBody = lines.join("\n").trim();
+
+    fetch("https://services.leadconnectorhq.com/contacts/" + contactId + "/notes", {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + ghl.apiToken,
+        "Version": "2021-07-28",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ body: noteBody })
+    }).then(function (response) {
+      if (!response.ok) {
+        console.warn("GHL note creation failed:", response.status);
+      } else {
+        console.log("GHL note created for contact:", contactId);
+      }
+    }).catch(function (error) {
+      console.warn("GHL note creation error:", error);
     });
   }
 
