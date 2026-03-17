@@ -42,7 +42,7 @@ window.SMART_CAPTURE_CONFIG = {
     apiToken: "pit-25a96551-8770-4f0d-946c-6c72f7d9e763",
     locationId: "dlGhpYm3nOX6E7eC0Sdr",
     source: "Smart Capture - Strategy Session",
-    tags: ["smart-capture", "strategy-session"],
+    tags: ["smart-capture", "strategy-session", "leadfi"],
     customFieldMap: {
       capital_range: "contact.capital_range",
       timeline: "contact.timeline"
