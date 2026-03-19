@@ -794,8 +794,39 @@
         state.ghlContactId = data.contact.id;
         console.log("GHL contact upserted:", data.contact.id);
         createContactNote(data.contact.id, ghl);
+        createOpportunity(data.contact.id, ghl);
       }
       return data;
+    });
+  }
+
+  function createOpportunity(contactId, ghl) {
+    var pipeline = ghl.pipeline;
+    if (!pipeline || !pipeline.id || !pipeline.stageId) return;
+
+    fetch("https://services.leadconnectorhq.com/opportunities/upsert", {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + ghl.apiToken,
+        "Version": "2021-07-28",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        pipelineId: pipeline.id,
+        pipelineStageId: pipeline.stageId,
+        locationId: ghl.locationId,
+        contactId: contactId,
+        name: (state.answers.first_name || "") + " " + (state.answers.last_name || ""),
+        status: "open"
+      })
+    }).then(function (response) {
+      if (!response.ok) {
+        console.warn("GHL opportunity creation failed:", response.status);
+      } else {
+        console.log("GHL opportunity created for contact:", contactId);
+      }
+    }).catch(function (error) {
+      console.warn("GHL opportunity creation error:", error);
     });
   }
 

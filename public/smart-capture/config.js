@@ -46,6 +46,10 @@ window.SMART_CAPTURE_CONFIG = {
     customFieldMap: {
       capital_range: "contact.capital_range",
       timeline: "contact.timeline"
+    },
+    pipeline: {
+      id: "ndXBIdMJQV7KGR69HO0L",
+      stageId: "6adc41c9-583e-4180-923d-d969a25be72c"
     }
   },
   legalLinks: [
