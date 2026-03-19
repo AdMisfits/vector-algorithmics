@@ -794,7 +794,7 @@
         state.ghlContactId = data.contact.id;
         console.log("GHL contact upserted:", data.contact.id);
         createContactNote(data.contact.id, ghl);
-        createOpportunity(data.contact.id, ghl);
+        // createOpportunity(data.contact.id, ghl);
       }
       return data;
     });
