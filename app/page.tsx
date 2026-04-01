@@ -50,7 +50,7 @@ const faqData = [
   },
   {
     q: 'Do you offer payment plans?',
-    a: 'Yes. We partner with Splitit to offer interest-free installment plans. Payments are split across your existing credit card with no additional interest or fees. You\'ll need available credit on your card to qualify.',
+    a: 'Yes. We partner with Splitit to offer flexible installment plans. Payments are split across your existing credit card, making it easier to manage costs over time. Terms and any applicable fees are determined by Splitit — you\'ll need available credit on your card to qualify.',
   },
   {
     q: 'How liquid is this? Can I withdraw funds?',
